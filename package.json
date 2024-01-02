@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jscodeshift -t ./transform/replaceGtag.ts ./src --extensions=tsx --parser=tsx",
-    "refactor": "jscodeshift -t ./transform/replaceGtag.ts /Users/sirchen/Desktop/ips-sass/src --extensions=tsx --parser=tsx"
+    "replaceGtag:test": "jscodeshift -t ./transform/replaceGtag.ts ./transform/src --extensions=tsx --parser=tsx",
+    "replaceGtag": "jscodeshift -t ./transform/replaceGtag.ts /Users/sirchen/Desktop/ips-sass/src --extensions=tsx --parser=tsx",
+    "dealTsx:test": "node ./custom/dealTsx.js ./custom/src",
+    "dealTsx": "node ./custom/dealTsx.js /Users/sirchen/Desktop/ips-sass/src",
+    "dealLess:test": "node ./custom/dealLess.js ./custom/src",
+    "dealLess": "node ./custom/dealLess.js /Users/sirchen/Desktop/ips-sass/src"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "4.0.0",
     "jscodeshift": "^0.15.1"
   },
   "devDependencies": {
